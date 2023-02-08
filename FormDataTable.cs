@@ -53,7 +53,8 @@ namespace DataTable
             SortTable();
             DisplayArray();
         }
-                private void SortTable()
+        
+        private void SortTable()
         {
             for (int x = 1; x < row; x++)
             {
@@ -66,6 +67,7 @@ namespace DataTable
                 }
             }
         }
+        
         private void Swap(int i)
         {
             for (int y = 0; y < col; y++)
