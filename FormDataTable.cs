@@ -50,7 +50,30 @@ namespace DataTable
         private void ButtonFillDisplay_MouseClick(object sender, MouseEventArgs e)
         {
             FillArray();
+            SortTable();
             DisplayArray();
+        }
+                private void SortTable()
+        {
+            for (int x = 1; x < row; x++)
+            {
+                for (int i = 0; i < row - 1; i++)
+                {
+                    if (string.Compare(DataTable[i, 0], DataTable[i + 1, 0]) == 1)
+                    {
+                        Swap(i);
+                    }
+                }
+            }
+        }
+        private void Swap(int i)
+        {
+            for (int y = 0; y < col; y++)
+            {
+                string temp = DataTable[i, y];
+                DataTable[i, y] = DataTable[i + 1, y];
+                DataTable[i + 1, y] = temp;
+            }
         }
     }
 }
