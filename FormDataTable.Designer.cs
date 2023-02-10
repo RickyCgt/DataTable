@@ -62,9 +62,9 @@
             this.columnHeader4,
             this.columnHeader5});
             this.ListViewData.HideSelection = false;
-            this.ListViewData.Location = new System.Drawing.Point(15, 63);
+            this.ListViewData.Location = new System.Drawing.Point(15, 51);
             this.ListViewData.Name = "ListViewData";
-            this.ListViewData.Size = new System.Drawing.Size(325, 362);
+            this.ListViewData.Size = new System.Drawing.Size(312, 362);
             this.ListViewData.TabIndex = 4;
             this.ListViewData.UseCompatibleStateImageBehavior = false;
             this.ListViewData.View = System.Windows.Forms.View.Details;
@@ -105,7 +105,7 @@
             this.UX_Feedback});
             this.statusStrip1.Location = new System.Drawing.Point(0, 447);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(374, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(364, 22);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -118,13 +118,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 469);
+            this.ClientSize = new System.Drawing.Size(364, 469);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ButtonSort);
             this.Controls.Add(this.ListViewData);
             this.Controls.Add(this.ButtonFillDisplay);
             this.Name = "FormDataTable";
             this.Text = "My Data Table";
+            this.Load += new System.EventHandler(this.FormDataTable_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
