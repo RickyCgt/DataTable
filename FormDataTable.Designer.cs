@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.ButtonFillDisplay = new System.Windows.Forms.Button();
-            this.TextBoxInput = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.ListViewData = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,6 +38,9 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ButtonSort = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.UX_Feedback = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ButtonFillDisplay
@@ -51,24 +52,6 @@
             this.ButtonFillDisplay.Text = "Fill and Display";
             this.ButtonFillDisplay.UseVisualStyleBackColor = true;
             this.ButtonFillDisplay.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ButtonFillDisplay_MouseClick);
-            // 
-            // TextBoxInput
-            // 
-            this.TextBoxInput.Location = new System.Drawing.Point(411, 33);
-            this.TextBoxInput.Name = "TextBoxInput";
-            this.TextBoxInput.Size = new System.Drawing.Size(100, 20);
-            this.TextBoxInput.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.TextBoxInput, "Double Click to clear this Text Box");
-            this.TextBoxInput.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.TextBoxInput_MouseDoubleClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(411, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Input Number";
             // 
             // ListViewData
             // 
@@ -116,18 +99,34 @@
             this.ButtonSort.UseVisualStyleBackColor = true;
             this.ButtonSort.Click += new System.EventHandler(this.ButtonSort_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.UX_Feedback});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 447);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(374, 22);
+            this.statusStrip1.TabIndex = 6;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // UX_Feedback
+            // 
+            this.UX_Feedback.Name = "UX_Feedback";
+            this.UX_Feedback.Size = new System.Drawing.Size(0, 17);
+            // 
             // FormDataTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 469);
+            this.ClientSize = new System.Drawing.Size(374, 469);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ButtonSort);
             this.Controls.Add(this.ListViewData);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.TextBoxInput);
             this.Controls.Add(this.ButtonFillDisplay);
             this.Name = "FormDataTable";
             this.Text = "My Data Table";
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,8 +135,6 @@
         #endregion
 
         private System.Windows.Forms.Button ButtonFillDisplay;
-        private System.Windows.Forms.TextBox TextBoxInput;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView ListViewData;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -146,6 +143,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button ButtonSort;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel UX_Feedback;
     }
 }
 
