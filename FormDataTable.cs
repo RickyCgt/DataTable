@@ -21,6 +21,8 @@ namespace DataTable
         static int row = 12;
         static int col = 5;
         string[,] DataTable = new string[row, col];
+        bool sorted = false;
+        bool filled = false;
 
         private void FillArray()
         {
@@ -32,25 +34,32 @@ namespace DataTable
                     DataTable[x, y] = random.Next(10, 99).ToString();
                 }
             }
+            filled = true;
         }
         private void DisplayArray()
         {
-            ListViewData.Items.Clear();
-            for (int x = 0; x < row; x++)
+            if (filled && sorted)
             {
-                ListViewItem item = new ListViewItem(DataTable[x, 0]);
-                item.SubItems.Add(DataTable[x, 1]);
-                item.SubItems.Add(DataTable[x, 2]);
-                item.SubItems.Add(DataTable[x, 3]);
-                item.SubItems.Add(DataTable[x, 4]);
-                ListViewData.Items.Add(item);
+                ListViewData.Items.Clear();
+                for (int x = 0; x < row; x++)
+                {
+                    ListViewItem item = new ListViewItem(DataTable[x, 0]);
+                    item.SubItems.Add(DataTable[x, 1]);
+                    item.SubItems.Add(DataTable[x, 2]);
+                    item.SubItems.Add(DataTable[x, 3]);
+                    item.SubItems.Add(DataTable[x, 4]);
+                    ListViewData.Items.Add(item);
+                }
+            }
+            else 
+            {
+                MessageBox.Show("the data is empty");
             }
         }
 
         private void ButtonFillDisplay_MouseClick(object sender, MouseEventArgs e)
         {
             FillArray();
-            SortTable();
             DisplayArray();
         }
         
@@ -66,15 +75,29 @@ namespace DataTable
                     }
                 }
             }
+            sorted = true;
         }
         
-        private void Swap(int i)
+        private void Swap(int J)
         {
             for (int y = 0; y < col; y++)
             {
-                string temp = DataTable[i, y];
-                DataTable[i, y] = DataTable[i + 1, y];
-                DataTable[i + 1, y] = temp;
+                string temp = DataTable[J, y];
+                DataTable[J, y] = DataTable[J + 1, y];
+                DataTable[J + 1, y] = temp;
+            }
+        }
+
+        private void ButtonSort_Click(object sender, EventArgs e)
+        {
+            if (!sorted)
+            {
+                SortTable();
+                DisplayArray();
+            }
+            else
+            {
+                MessageBox.Show("The table is already sorted");
             }
         }
     }

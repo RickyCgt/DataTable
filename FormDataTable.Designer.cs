@@ -37,11 +37,12 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ButtonSort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ButtonFillDisplay
             // 
-            this.ButtonFillDisplay.Location = new System.Drawing.Point(12, 12);
+            this.ButtonFillDisplay.Location = new System.Drawing.Point(15, 12);
             this.ButtonFillDisplay.Name = "ButtonFillDisplay";
             this.ButtonFillDisplay.Size = new System.Drawing.Size(96, 23);
             this.ButtonFillDisplay.TabIndex = 0;
@@ -51,7 +52,7 @@
             // 
             // TextBoxInput
             // 
-            this.TextBoxInput.Location = new System.Drawing.Point(154, 27);
+            this.TextBoxInput.Location = new System.Drawing.Point(411, 33);
             this.TextBoxInput.Name = "TextBoxInput";
             this.TextBoxInput.Size = new System.Drawing.Size(100, 20);
             this.TextBoxInput.TabIndex = 1;
@@ -59,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(154, 11);
+            this.label1.Location = new System.Drawing.Point(411, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 3;
@@ -101,11 +102,22 @@
             // 
             this.columnHeader5.Text = "Col_5";
             // 
+            // ButtonSort
+            // 
+            this.ButtonSort.Location = new System.Drawing.Point(117, 12);
+            this.ButtonSort.Name = "ButtonSort";
+            this.ButtonSort.Size = new System.Drawing.Size(106, 23);
+            this.ButtonSort.TabIndex = 5;
+            this.ButtonSort.Text = "Sort";
+            this.ButtonSort.UseVisualStyleBackColor = true;
+            this.ButtonSort.Click += new System.EventHandler(this.ButtonSort_Click);
+            // 
             // FormDataTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 469);
+            this.ClientSize = new System.Drawing.Size(549, 469);
+            this.Controls.Add(this.ButtonSort);
             this.Controls.Add(this.ListViewData);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TextBoxInput);
@@ -128,6 +140,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Button ButtonSort;
     }
 }
 
